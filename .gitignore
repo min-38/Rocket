@@ -6,3 +6,15 @@
 
 # Unignore all dirs
 !*/
+
+# makefile
+!makefile
+
+# object file
+*.o
+
+# .trunk
+.trunk
+
+# .vscode
+.vscode
