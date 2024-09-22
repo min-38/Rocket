@@ -1,8 +1,13 @@
-#include <iostream>
-
-using namespace std;
+#include "utils.h"
+#include "rocket.h"
+#include "action/rcktAction.h"
+#include "action/menuAction.h"
 
 int main() {
-    cout << "project start" << endl;
+    MenuAction *ma = new MenuAction(new RcktAction());
+
+    thread t = createThread(ma, &MenuAction::showMenu);
+    t.join();
+
     return 0;
 }
