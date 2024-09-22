@@ -4,17 +4,20 @@
 class Rocket {
 private:
     double dist;
-    int speed;
+    double speed;
+    double duration;
 public:
     Rocket();
     ~Rocket();
 
-    // Setter
-    void setDist(const int dist); // 입력 받기
-    void setSpeed(const int speed);
-
     // Getter
     double* getDist();
+    double* getSpd();
+    double getDuration();
+
+    // Setter
+    void setDist(const int dist); // 입력 받기
+    void setSpd(const int speed);
 };
 
 #endif // ROCKET_H
